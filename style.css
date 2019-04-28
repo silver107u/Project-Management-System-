@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #696969;
+}
+h1{
+    margin-top: 6rem;
+    margin-left: 6rem;
+    color: rgb(247, 247, 247);
+}
+h2{
+  text-align:center;
+}
+header {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_container {
+    width: 90%;
+}
+
+.nav_container ul {
+    list-style: none;
+}
+
+.nav_container ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 4rem;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    color: rgb(247, 247, 247);
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+}
+
+.main_menu {
+    display: flex;
+}
+
+.main_menu li {
+    position: relative;
+    width: 100%;
+}
+
+.main_menu li a {
+    background-color: #1A535C;
+    transition: background-color 200ms ease-in-out;
+}
+
+.sub_menu li a {
+    background-color: #4ECDC4;
+    text-align: center;
+}
+
+.main_menu li a:hover {
+    background-color: #4ECDC4;
+    color: rgb(255, 255, 255);
+}
+
+.sub_menu li a:hover {
+    background-color: orange;
+    color: white;
+}
+
+.main_menu .show_sub:hover .sub_menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub_menu {
+    transition: opacity 500ms ease-in-out; 
+    visibility: hidden;
+    opacity: 0;
+}
+
+.main_menu > li:first-child a {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.main_menu > li:last-child a {
+    border-radius: 0 1rem 1rem 0;
+}
+.main_menu > li > a {
+    position: relative;
+}
+
+.main_menu > li > a::before { 
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: rgb(255, 85, 85);
+    bottom: 3%;
+    z-index: 1;
+    border-radius: 1rem;
+    transition: width 200ms ease-in-out;
+}
+
+.main_menu > li > a:hover:before { 
+    width: 90%;
+}
+
+.sub_menu > li:last-child  > a{
+    border-radius: 0 0 1rem 1rem;
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+/*login for mentor and admin */
+/*--------------------------------------------------------------------------------------*/
+
+/* Bordered form */
+form {
+    margin-top: 6rem;
+  border: 3px solid #f1f1f1;
+}
+.projectDesc {
+  margin-top: 0rem;
+border: 3px solid #f1f1f1;
+width: 80%;
+margin-left:125px;
+
+}
+.uploadFiles{
+  margin-top: 0rem;
+ 
+ margin-right: 0px;
+}
+
+/*.labelname{
+    color: white;
+}*/
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 30px;
+  display: inline-block;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Add padding to containers */
+.container1 {
+  padding: 20px;
+  background-color: white;
+}
+.container2 {
+  background-color: white;
+  margin-left: 200px;
+  width: 70%;
+  margin-top: 0rem;
+
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 80%;
+  }
+}
+
+/*------------------------------------------------------------------------------------*/
+/*Login and register form for students*/
+/*------------------------------------------------------------------------------------*/
+/* Full-width input fields */
+input[type=text], input[type=password] , input[type=email]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
